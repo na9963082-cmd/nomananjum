@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nomi Growth Engine | Full Stack Web Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Noman Anjum (Nomi Growth Engine), a Full Stack Web Developer based in Karachi, Pakistan."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // Initialize EmailJS with your User ID
+        // REPLACE 'YOUR_PUBLIC_KEY' WITH YOUR ACTUAL PUBLIC KEY FROM EMAILJS DASHBOARD
+        emailjs.init("YOUR_PUBLIC_KEY");
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <a href="#home" class="logo">
+            <span style="color: #ff4d4d;">Noman</span><span style="color: #fff;">Anjum</span>
+        </a>
+        
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+        <a href="#contact" class="btn-get-started">Get Started</a>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home hidden" id="home">
+        <div class="background-animation"></div>
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Noman Anjum</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Professional Full Stack Web Developer connected with the digital world. I build high-end, user-friendly, and responsive websites to help your business grow.</p>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+        <div class="home-img">
+            <div class="glow-circle"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about hidden" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            
+            <div class="about-flex-container">
+                <img src="Images/noman.jpg.webp" alt="Noman Anjum" class="about-img">
+                
+                <div class="about-text">
+                    <h3>Full Stack Web Developer</h3>
+                    <p>My name is Noman Anjum. I'm a Web developer. I create coding and wordpress websites. I learn web development from YouTube.</p>
+                    <p>I am passionate about building clean, efficient, and user-centric digital experiences. Whether it's a custom-coded application or a flexible CMS solution, I bring ideas to life with modern technologies.</p>
+                    
+                    <div class="social-media-about">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-list-container">
+                <h3 style="margin-bottom: 1.5rem; color: var(--main-color);">My Skills</h3>
+                <ul class="skills-list">
+                    <li><i class="fa-solid fa-check-circle"></i> HTML / CSS / JavaScript</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Wordpress Website Development</li>
+                    <li><i class="fa-solid fa-check-circle"></i> AI Tools & Prompt Engineering</li>
+                </ul>
+            </div>
+
+            <a href="#contact" class="btn">Let's Talk</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services hidden" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Full Stack Development</h3>
+                <p>Complete web solutions built from scratch using the latest MERN stack technologies.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Frontend Design</h3>
+                <p>Responsive, interactive, and modern UI/UX designs that look great on all devices.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-server"></i>
+                <h3>Backend Integration</h3>
+                <p>Secure and scalable server-side programming with Node.js and database management.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Optimization & Deployment</h3>
+                <p>Speed optimization, SEO best practices, and secure deployment to the cloud.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact hidden" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <div class="contact-container" style="display: block; text-align: center;">
+            <div class="contact-text-content" style="max-width: 800px; margin: 0 auto 3rem;">
+                <h3>Why Professional Web Development Matters?</h3>
+                <p>In today's digital age, your website is the face of your business. A professional, responsive, and fast-loading website builds trust and converts visitors into loyal customers. I ensure that every line of code adds value to your brand identity.</p>
+                <p style="margin-top: 1rem;">Whether you need a custom coded platform or a WordPress solution, I am here to help you achieve your digital goals with precision and creativity.</p>
+            </div>
+
+            <div class="contact-info" style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Bagh-e-Korangi, Karachi, Sindh, Pakistan</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>nomigrowthenine@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left: Logo & Socials -->
+            <div class="footer-col" style="text-align: left;">
+                <a href="#home" class="logo" style="font-size: 2.2rem; font-weight: 700; color: var(--text-color); text-decoration: none; display: inline-block; margin-bottom: 1.5rem;">
+                    <span style="color: #ff4d4d;">Noman</span><span style="color: #fff;">Anjum</span>
+                </a>
+                <div class="social-media" style="justify-content: flex-start; display: flex;">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Center: About Me -->
+            <div class="footer-col" style="text-align: center;">
+                <h3>About Me</h3>
+                <p>I created this website to showcase my skills. I am Noman Anjum, dedicated to providing top-notch web development services. Let's build something amazing together.</p>
+            </div>
+            
+            <!-- Right: Pages -->
+            <div class="footer-col" style="text-align: right;">
+                <h3>Pages</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom" style="position: relative; justify-content: center;">
+            <p>Copyright &copy; 2026 by Noman Anjum | All Rights Reserved.</p>
+            <div class="footer-iconTop" style="position: absolute; right: 0;">
+                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Typer JS for typing effect (optional, or we can write our own in script.js) -->
+    <!-- We will implement a custom simple typer in script.js to keep dependencies low -->
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

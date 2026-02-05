@@ -1,0 +1,724 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* Global Variables */
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #e63946; /* Professional Red */
+  --hover-color: #ff5e6c;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    position: relative;
+    /* Optional: Animated Gradient Background on Body or overlay */
+}
+
+/* Removed duplicate background-animation */
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent; /* Transparent to show background image */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: var(--second-bg-color); /* Dark when scrolling */
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ... (Logo and Navbar styles remain) ... */
+
+/* Home Background */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('Images/background.jpg') no-repeat center center/cover;
+    /* Removed brightness filter/overlay as requested */
+}
+
+/* ... */
+
+/* Services Section */
+.services {
+    background: url('Images/background.jpg') no-repeat center center/cover;
+     position: relative;
+     z-index: 1;
+}
+
+/* Remove overlay or make it invisible */
+.services::before {
+    display: none; 
+}
+
+.header.sticky {
+  background: var(--second-bg-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  cursor: default;
+}
+
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin: 0 2rem; /* Adjusted margin for centered spacing */
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.btn-get-started {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  color: #fff !important; /* Force white text */
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.5s ease;
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn-get-started:hover {
+  box-shadow: none;
+  background: var(--hover-color);
+  color: #fff;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+  cursor: pointer;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Center everything vertically */
+    text-align: center; /* Center text */
+    gap: 2rem;
+    padding-top: 12rem; /* Clear fixed header */
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+span.multiple-text {
+  color: var(--main-color);
+}
+
+.home-content p {
+  font-size: 1.6rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+/* Remove/Update old gradientBG if conflicting or unused */
+/* .home-img hidden for centered layout */
+.home-img {
+    display: none;
+}
+
+.glow-circle {
+  width: 100%;
+  height: 35vw; /* Roughly circle */
+  background: radial-gradient(circle, var(--main-color) 0%, transparent 60%);
+  opacity: 0.2;
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.1;
+  }
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--second-bg-color);
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+/* Skills List Styles */
+.skills-list-container {
+    text-align: left;
+    margin: 0 auto 3rem;
+    max-width: 600px; /* Aligns with the text above usually */
+    /* Center the container itself if needed */
+    display: inline-block;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills-list li i {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+/* Previous skill bar styles (unused now) can be kept or removed 
+   Keeping them wont hurt, but removing cleans file. 
+   I will leave them to avoid large deletions unless necessary.
+*/
+.skill-box {
+  margin-bottom: 1.5rem;
+  display: none; /* Hide old elements if any remain */
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  height: 10px;
+  width: 100%;
+  background: #12141c;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-per {
+  height: 100%;
+  background: var(--main-color);
+  border-radius: 6px;
+  width: 0;     /* Start at 0 */
+  transition: 1s linear;
+  position: relative;
+}
+
+.skill-per.html-css.filled { width: 95%; }
+.skill-per.react.filled { width: 90%; }
+.skill-per.nodejs.filled { width: 85%; }
+.skill-per.db.filled { width: 80%; }
+
+/* Services Section */
+.services {
+    background: url('Images/background.jpg') no-repeat center center/cover;
+    /* Reuse the linear gradient or filter for consistency? 
+       User liked the dark filter on home. Let's use similar approach or explicit overlay */
+     position: relative;
+     z-index: 1;
+}
+
+/* Add overlay to ensure text readability if not using filter on container */
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85); /* Dark overlay */
+    z-index: -1;
+}
+
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.service-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+}
+
+.service-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.service-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.service-box h3 {
+  font-size: 2.6rem;
+}
+
+.service-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+/* Contact Section */
+.contact {
+  background: var(--second-bg-color);
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-text-content h3 {
+    font-size: 2.6rem; /* Increased from default */
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.contact-text-content p {
+    font-size: 1.8rem; /* Increased from 1.6rem */
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info .box {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.contact-info .icon i {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  background: var(--bg-color);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.contact-info .text h3 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+.contact-info .text p {
+  font-size: 1.4rem;
+  color: #bdbdbd;
+}
+
+.contact form {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/* About Section Updates */
+.about-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    width: 280px; /* Reduced width */
+    height: 380px; /* Increased height for vertical rectangle */
+    object-fit: cover;
+    border: .2rem solid var(--main-color);
+    border-radius: 1rem; /* Rounded corners but rectangular */
+    box-shadow: 0 0 2rem var(--main-color);
+    /* animation: pulse 3s infinite; -- REMOVED */
+}
+
+/* .about-img-placeholder removed/replaced */
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.social-media-about {
+    margin-top: 2rem;
+}
+
+.social-media-about a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: transparent;
+    border: .1rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-right: 1rem;
+    transition: .5s ease;
+}
+
+.social-media-about a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+/* Footer Updates */
+.footer {
+    display: block; /* Changed from flex to block to handle rows */
+    background: #111; /* Dark background as requested */
+    color: #fff;
+    padding: 5rem 9% 2rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-col h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+}
+
+.footer-col p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.footer-links li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.footer-links li a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    transition: .3s;
+}
+
+.footer-links li a:hover {
+    color: var(--main-color);
+    transform: translateX(5px);
+    display: inline-block;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .services {
+    padding-bottom: 7rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links */
+    height: auto;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+  }
+  
+  .btn-get-started {
+      display: none; /* Hide CTA on mobile or keep it? User didn't specify, but usually header space is tight. */
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+  .glow-circle {
+    height: 70vw;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+
+/* Scroll Animation Utilities */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.skill-per {
+  width: 0;
+  /* Initial state for animation */
+}
